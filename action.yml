@@ -1,5 +1,5 @@
 name: 'Wait / Sleep Action'
-description: 'Github actions to wait / sleep during a job execution ⏱'
+description: 'Github actions to wait / sleep during a workflow execution (all os supported) ⏱'
 
 inputs:
   time:
