@@ -16,6 +16,8 @@ SUFFIX may be:
 - `'h'` for hours,
 - `'d'` for days.
 
+_**Note**: The `sleep command` on MacOS only works with seconds, therefore this action converts the SUFFIX automatically._
+
 ### Example
 
 ```yaml

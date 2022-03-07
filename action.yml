@@ -13,7 +13,6 @@ runs:
       run: |
         echo "Waiting for ${{ inputs.time }}... ⏱"
         if [[ $OSTYPE == 'darwin'* ]]; then 
-          echo 'macOS'
           PATH=$PATH/bin
           INPUT=${{ inputs.time }}
           if [[ ${{ inputs.time }} == *"s"* ]]; then
