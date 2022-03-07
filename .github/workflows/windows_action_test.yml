@@ -1,0 +1,15 @@
+name: Action test on Windows
+
+on:
+  schedule:
+    - cron: "0 6 * * MON-FRI" # Runs at 06:00 UTC
+  push:
+  workflow_dispatch:
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: GuillaumeFalourd/wait-sleep-action@main
+        with:
+          time: '1m' # for 1 minute

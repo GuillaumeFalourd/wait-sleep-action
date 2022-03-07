@@ -1,25 +1,42 @@
-# <repo_name>
+# Wait / Sleep action
 
-[![Security Pipeline](https://github.com/GuillaumeFalourd/<repo_name>/actions/workflows/security-pipeline.yml/badge.svg)](https://github.com/GuillaumeFalourd/<repo_name>/actions/workflows/security-pipeline.yml) [![Super Linter](https://github.com/GuillaumeFalourd/<repo_name>/actions/workflows/super-linter.yml/badge.svg)](https://github.com/GuillaumeFalourd/<repo_name>/actions/workflows/super-linter.yml) [![Gitleaks](https://github.com/GuillaumeFalourd/<repo_name>/actions/workflows/gitleaks.yml/badge.svg)](https://github.com/GuillaumeFalourd/<repo_name>/actions/workflows/gitleaks.yml)
+[![Action test on Ubuntu](https://github.com/GuillaumeFalourd/wait-sleep-action/actions/workflows/ubuntu_action_test.yml/badge.svg)](https://github.com/GuillaumeFalourd/wait-sleep-action/actions/workflows/ubuntu_action_test.yml) [![Action test on MacOS](https://github.com/GuillaumeFalourd/wait-sleep-action/actions/workflows/macos_action_test.yml/badge.svg)](https://github.com/GuillaumeFalourd/wait-sleep-action/actions/workflows/macos_action_test.yml) [![Action test on Windows](https://github.com/GuillaumeFalourd/wait-sleep-action/actions/workflows/windows_action_test.yml/badge.svg)](https://github.com/GuillaumeFalourd/wait-sleep-action/actions/workflows/windows_action_test.yml)
 
-☞ Github repository template to create other personal repositories 🧑‍💻🏗
+☞ Github Action to wait / sleep during a job execution ⏱
 
-## 📚 What is Lorem Ipsum?
+_**Note**: This action is supported on **all runners** operating systems (`ubuntu`, `macos`, `windows`)_
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+## 📚 Usage
+
+This action uses the Linux [sleep command](https://linux.die.net/man/1/sleep) to wait for a specific time during a job execution.
+
+SUFFIX may be:
+- 's' for seconds (the default), 
+- 'm' for minutes, 
+- 'h' for hours,
+- 'd' for days.
+
+### Example
+
+```yaml
+    steps:
+      - uses: GuillaumeFalourd/wait-sleep-action@v1
+        with:
+          time: '1m' # for 1 minute
+```
 
 ## 🤝 Contributing
 
-☞ If you're interested in contributing to this repository, please follow the [guidelines](https://github.com/GuillaumeFalourd/<repo_name>/blob/main/CONTRIBUTING.md)
+☞ If you're interested in contributing to this repository, please follow the [guidelines](https://github.com/GuillaumeFalourd/wait-sleep-action/blob/main/CONTRIBUTING.md)
 
 ## 🏅 Licensed
 
-☞ This repository uses the [Apache License 2.0](https://github.com/GuillaumeFalourd/<repo_name>/blob/main/LICENSE)
+☞ This repository uses the [Apache License 2.0](https://github.com/GuillaumeFalourd/wait-sleep-action/blob/main/LICENSE)
 
 <!-- ### Contribuidores
 
-<a href="https://github.com/GuillaumeFalourd/<repo_name>/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=GuillaumeFalourd/<repo_name>" />
+<a href="https://github.com/GuillaumeFalourd/wait-sleep-action/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=GuillaumeFalourd/wait-sleep-action" />
 </a>
 
 (Criado com [contributors-img](https://contrib.rocks)) -->

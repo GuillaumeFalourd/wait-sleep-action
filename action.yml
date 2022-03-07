@@ -1,0 +1,21 @@
+name: 'Wait / Sleep Action'
+description: 'Github actions to wait / sleep during a job execution ⏱'
+
+inputs:
+  time:
+    description: 'A number (integer) followed by s for seconds, m for minutes, h for hours, d for days.'
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name:
+      run: |
+        echo "Waiting for ${{ inputs.time }}... ⏱"
+        sleep ${{ inputs.time }}
+        echo "Time to get-going! 🚀"
+      shell: bash
+
+branding:
+  icon: clock
+  color: black
