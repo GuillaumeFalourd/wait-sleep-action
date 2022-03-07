@@ -2,6 +2,8 @@
 
 [![Action test on Ubuntu](https://github.com/GuillaumeFalourd/wait-sleep-action/actions/workflows/ubuntu_action_test.yml/badge.svg)](https://github.com/GuillaumeFalourd/wait-sleep-action/actions/workflows/ubuntu_action_test.yml) [![Action test on MacOS](https://github.com/GuillaumeFalourd/wait-sleep-action/actions/workflows/macos_action_test.yml/badge.svg)](https://github.com/GuillaumeFalourd/wait-sleep-action/actions/workflows/macos_action_test.yml) [![Action test on Windows](https://github.com/GuillaumeFalourd/wait-sleep-action/actions/workflows/windows_action_test.yml/badge.svg)](https://github.com/GuillaumeFalourd/wait-sleep-action/actions/workflows/windows_action_test.yml)
 
+![istockphoto-1322169400-170667a](https://user-images.githubusercontent.com/22433243/157050754-7192fae0-dea4-42f1-922b-ee038930882f.jpeg)
+
 ☞ Github Action to wait / sleep during a workflow execution ⏱
 
 _**Note**: This action is supported on **all runners** operating systems (`ubuntu`, `macos`, `windows`)_
