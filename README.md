@@ -11,10 +11,10 @@ _**Note**: This action is supported on **all runners** operating systems (`ubunt
 This action uses the Linux [sleep command](https://linux.die.net/man/1/sleep) to wait for a specific time during a job execution.
 
 SUFFIX may be:
-- 's' for seconds (the default), 
-- 'm' for minutes, 
-- 'h' for hours,
-- 'd' for days.
+- `'s'` for seconds (default), 
+- `'m'` for minutes, 
+- `'h'` for hours,
+- `'d'` for days.
 
 ### Example
 
