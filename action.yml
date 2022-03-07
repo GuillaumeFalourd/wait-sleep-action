@@ -15,18 +15,19 @@ runs:
         if [[ $OSTYPE == 'darwin'* ]]; then 
           echo 'macOS'
           PATH=$PATH/bin
+          INPUT=${{ inputs.time }}
           if [[ ${{ inputs.time }} == *"s"* ]]; then
             sleep ${{ inputs.time }}
           elif [[ ${{ inputs.time }} == *"m"* ]]; then
-            DURATION="${${{ inputs.time }}/"m"/}"
+            DURATION="${INPUT/"m"/}"
             DURATION="$(expr $DURATION \* 60)"
             sleep $DURATION
           elif [[ ${{ inputs.time }} == *"h"* ]]; then
-            DURATION="${${{ inputs.time }}/"h"/}"
+            DURATION="${INPUT/"h"/}"
             DURATION="$(expr $DURATION \* 60 \* 60)"
             sleep $DURATION
           elif [[ ${{ inputs.time }} == *"d"* ]]; then
-            DURATION="${${{ inputs.time }}/"d"/}"
+            DURATION="${INPUT/"d"/}"
             DURATION="$(expr $DURATION \* 60 \* 60 \* 24)"
             sleep $DURATION
           else
