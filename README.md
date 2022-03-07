@@ -18,13 +18,27 @@ SUFFIX may be:
 
 _**Note**: The `sleep command` on MacOS only works with seconds, therefore this action converts the SUFFIX automatically to the value in seconds._
 
-### Example
+### Examples
+
+```yaml
+    steps:
+      - uses: GuillaumeFalourd/wait-sleep-action@v1
+        with:
+          time: '60' # for 60 seconds
+```
 
 ```yaml
     steps:
       - uses: GuillaumeFalourd/wait-sleep-action@v1
         with:
           time: '1m' # for 1 minute
+```
+
+```yaml
+    steps:
+      - uses: GuillaumeFalourd/wait-sleep-action@v1
+        with:
+          time: '1h' # for 1 hour
 ```
 
 ## 🤝 Contributing
