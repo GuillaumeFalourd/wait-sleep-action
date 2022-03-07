@@ -12,6 +12,7 @@ runs:
     - name:
       run: |
         echo "Waiting for ${{ inputs.time }}... ⏱"
+        PATH="$PATH:/bin"
         sleep ${{ inputs.time }}
         echo "Time to get-going! 🚀"
       shell: bash
