@@ -18,20 +18,17 @@ runs:
           if [[ ${{ inputs.time }} == *"s"* ]]; then
             sleep ${{ inputs.time }}
           elif [[ ${{ inputs.time }} == *"m"* ]]; then
-            duration="${${{ inputs.time }}/m/""}"
-            duration=$($duration * 60)
-            echo $duration
-            sleep $duration
-          # elif [[ ${{ inputs.time }} == *"h"* ]]; then
-          #   duration="${${{ inputs.time }}/h/""}"
-          #   duration=$($duration * 60 * 60)
-          #   echo $duration
-          #   sleep $duration
-          # elif [[ ${{ inputs.time }} == *"d"* ]]; then
-          #   duration="${${{ inputs.time }}/d/""}"
-          #   duration=$($duration * 60 * 60 * 24)
-          #   echo $duration
-          #   sleep $duration
+            DURATION="${${{ inputs.time }}/"m"/}"
+            DURATION="$(expr $DURATION \* 60)"
+            sleep $DURATION
+          elif [[ ${{ inputs.time }} == *"h"* ]]; then
+            DURATION="${${{ inputs.time }}/"h"/}"
+            DURATION="$(expr $DURATION \* 60 \* 60)"
+            sleep $DURATION
+          elif [[ ${{ inputs.time }} == *"d"* ]]; then
+            DURATION="${${{ inputs.time }}/"d"/}"
+            DURATION="$(expr $DURATION \* 60 \* 60 \* 24)"
+            sleep $DURATION
           else
             sleep ${{ inputs.time }}
           fi
